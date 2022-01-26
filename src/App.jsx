@@ -3,15 +3,20 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { AppRouter } from './components/appRouter/AppRouter';
 import { Navigation } from './components/Partials/Navigation/Nav';
-import Burgermenu from './components/Partials/Burger/Burgermenu';
+import Burgers from './components/Partials/Burger/Burgermenu'
+import { Header } from './components/Partials/Header/Header';
+import { Main } from './components/Partials/Main/Main';
 
 function App() {
   return (
     <div className="container" id="outer-container">
       <Router>
-        <Burgermenu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+        <Header />
+        <Burgers pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Navigation />
-        <AppRouter />
+        <Main>
+          <AppRouter />
+        </Main>
       </Router>
     </div>
   );

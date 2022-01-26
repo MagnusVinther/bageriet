@@ -2,7 +2,7 @@ import React from "react";
 import { slide as Menu } from 'react-burger-menu'
 import './Burgermenu.css';
 
-export default props => {
+export default Burgers => {
     return (
         <Menu>
             <a className="menu-item" href="/">
