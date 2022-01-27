@@ -1,6 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .heroImgSlider {
     height: 100%;
     width: 100%;
+}
+.container {
+    h2 {
+        font-family: 'Lobster', cursive;
+    }
+    p {
+        width: 90%;
+        margin: auto;
+        color: grey;
+    }
 }

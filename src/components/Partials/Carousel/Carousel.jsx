@@ -29,8 +29,12 @@ export function Slider() {
     function Item(props) {
         return (
             <div className={Style.slide}>
-                <h3>{props.item.desc}</h3>
-                <img alt={props.item.alt} src={props.item.url} />
+                    <img alt={props.item.alt} src={props.item.url} />
+
+                    <figcaption>
+                        <h3>{props.item.desc}</h3>
+                    </figcaption>
+
             </div>
         )
     }
