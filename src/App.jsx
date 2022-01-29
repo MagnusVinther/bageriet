@@ -11,9 +11,10 @@ function App() {
   return (
     <div className="container" id="outer-container">
       <Router>
-        <Header />
-        <Burgers pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+        <Header>
         <Navigation />
+        </Header>
+        <Burgers pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Main>
           <AppRouter />
         </Main>

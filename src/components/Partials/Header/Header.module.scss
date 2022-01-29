@@ -1,3 +1,4 @@
+@import "../../../assets/Helpers/Media/Variables";
 
 
 .wrapper {
@@ -23,3 +24,13 @@
     }
     }
     
+    @media (max-width: $breakpoint-desktop) {
+
+        .wrapper {
+            header {
+                h1 {
+                    display: none;
+                }
+            }
+        }
+    }

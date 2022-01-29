@@ -20,7 +20,7 @@ export const NewsList = () => {
     return (
         <>
         <section className={style.news}>
-            {news && news.map(newsItem => {
+            {news && news.slice(0, 3).map(newsItem => {
                 return (
                     <figure>
                         <img src={newsItem.image} alt="newsImage" />
