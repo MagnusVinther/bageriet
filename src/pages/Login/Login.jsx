@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../components/Context/AuthProvider";
 
-export const Login = () => {
+
+
+export const LoginForm = () => {
     const introMessage = "Indtast brugernavn og adgangskode for at logge ind"
     const [ message, setMessage ] = useState(introMessage);
-    const [ loginData, setLoginData ] = useState('')
+    const { loginData, setLoginData } = useContext(AuthContext);
 
     const SubmitLoginForm = async e => {
         const formData = new FormData(e.target.form)
@@ -26,7 +29,7 @@ export const Login = () => {
         }
     }
 
-    const logOUt = () => {
+    const logOut = () => {
         sessionStorage.removeItem('token')
         setLoginData('')
         setMessage(introMessage)
@@ -53,7 +56,7 @@ export const Login = () => {
             </form>
             :
             <form>
-                <button type="button" onClick={logOUt}>Log out</button>
+                <button type="button" onClick={logOut}>Log out</button>
             </form>
             }
         </div>

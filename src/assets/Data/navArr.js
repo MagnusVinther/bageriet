@@ -1,6 +1,6 @@
 import { Contacts } from "../../pages/Contacts/Contacts";
 import { Home } from "../../pages/Home/Home";
-import { Login } from "../../pages/Login/Login";
+import { LoginForm } from "../../pages/Login/Login";
 import { Products } from "../../pages/Products/Products";
 
 
@@ -32,7 +32,7 @@ const navArr = [
     {
         title: 'LOGIN',
         path: '/login',
-        element: <Login />,
+        element: <LoginForm />,
         display: true
     }
 ]
